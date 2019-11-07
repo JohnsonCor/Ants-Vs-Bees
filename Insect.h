@@ -27,8 +27,8 @@ public:
 
     virtual void action() = 0;
     virtual void takeDamage();
-    virtual bool isAnt();
-    virtual bool isBee();
+    virtual bool isAnt() = 0;
+    virtual bool isBee() = 0;
     virtual std::string toString() = 0;
 
 private:

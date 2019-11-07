@@ -9,12 +9,31 @@
 #include <vector>
 #include "Insect.h"
 
+
 class Ant : public Insect {
 
 public:
+    //Ant(string name, BoardSpace space, int armor);
+    Ant();
+
+    Ant(const Ant &orig);
+    ~Ant();
+    Ant &operator=(const Ant &orig);
+
+    virtual std::string getName();
+    virtual int getDamage();
+    virtual int getFoodCost();
+
+    virtual void setName(std::string name);
+    virtual void setDamage(int damage);
+    virtual void setFoodCost(int foodCost);
+
+    bool isAnt() override ;
 
 private:
-
+    std::string name;
+    int damage;
+    int foodCost;
 };
 
 
