@@ -63,7 +63,7 @@ int BoardSpace::getSpaceNum() const {
  * @description BoardSpace space number setter method
  */
 void BoardSpace::setSpaceNum(int spaceNum) {
-
+    this->spaceNum = spaceNum;
 }
 
 /**
@@ -72,6 +72,9 @@ void BoardSpace::setSpaceNum(int spaceNum) {
  * @description Return true if the space is occupied by an Ant
  */
 bool BoardSpace::hasAnt() {
+    if (sizeof(ants) != 0) {
+        return true;
+    }
     return false;
 }
 
@@ -90,7 +93,14 @@ bool BoardSpace::hasBee() {
  * @description Add an Insect to a BoardSpace
  */
 void BoardSpace::addInsect(Insect insect) {
-
+    if (insect.isAnt()) {
+        insects.push_back(insect);
+        //ants.push_back(insect);
+    }
+    if (insect.isBee()) {
+        insects.push_back(insect);
+        //bees.push_back(insect);
+    }
 }
 
 /**

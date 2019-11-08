@@ -39,9 +39,11 @@ public:
 
 private:
     Insect insect;
+    //Ant* a; If Ant is pure virtual you can have pointer but not object
     //FireAnt f;
     Bee b;
-    //std::vector<Ant> ants; no work
+    std::vector<Insect> insects;
+    std::vector<Ant> ants;
     std::vector<Bee> bees;
     int spaceNum;
 };
