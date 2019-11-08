@@ -7,7 +7,9 @@
 
 #include <string>
 #include <vector>
-#include "Insect.h"
+//#include "Insect.h"
+//#include "Ant.h"
+#include "FireAnt.h"
 
 class BoardSpace {
 

@@ -10,7 +10,7 @@
 #include "Insect.h"
 
 
-class Ant : public Insect {
+class Ant: public Insect {
 
 public:
     //Ant(string name, BoardSpace space, int armor);
@@ -28,7 +28,7 @@ public:
     virtual void setDamage(int damage);
     virtual void setFoodCost(int foodCost);
 
-    bool isAnt() override ;
+    //bool isAnt() override ;
 
 private:
     std::string name;
