@@ -13,7 +13,7 @@
 class Ant: public Insect {
 
 public:
-    //Ant(string name, BoardSpace space, int armor);
+    Ant(std::string name, int armor);
     Ant();
 
     Ant(const Ant &orig);
@@ -28,7 +28,8 @@ public:
     virtual void setDamage(int damage);
     virtual void setFoodCost(int foodCost);
 
-    //bool isAnt() override ;
+    virtual void action() = 0;
+    virtual bool isAnt();
 
 private:
     std::string name;

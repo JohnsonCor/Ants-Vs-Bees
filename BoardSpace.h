@@ -7,35 +7,44 @@
 
 #include <string>
 #include <vector>
-//#include "Insect.h"
-//#include "Ant.h"
+#include "Insect.h"
+#include "Bee.h"
+#include "HarvesterAnt.h"
+#include "ThrowerAnt.h"
 #include "FireAnt.h"
+#include "LongThrowerAnt.h"
+#include "ShortThrowerAnt.h"
+#include "WallAnt.h"
+#include "NinjaAnt.h"
+#include "BodyguardAnt.h"
 
 class BoardSpace {
 
 public:
-    BoardSpace(int spaceNum);
+    explicit BoardSpace(int spaceNum);
     BoardSpace();
 
     BoardSpace(const BoardSpace &orig);
     ~BoardSpace();
     BoardSpace &operator=(const BoardSpace &orig);
 
-    virtual int getSpaceNum();
+    virtual int getSpaceNum() const ;
 
     virtual void setSpaceNum(int spaceNum);
 
     virtual bool hasAnt();
     virtual bool hasBee();
-    //virtual void addInsect(Insect insect);
-    //virtual void removeInsect(Insect insect);
+    virtual void addInsect(Insect insect);
+    virtual void removeInsect(Insect insect);
 
 private:
-    //Insect insect;
-    //std::vector<Ant> ants;
-    //std::vector<Bee> bees;
+    Insect insect;
+    //FireAnt f;
+    Bee b;
+    //std::vector<Ant> ants; no work
+    std::vector<Bee> bees;
     int spaceNum;
 };
 
 
-#endif //JOHNSON_COREY_LAB5_BOARDSPACE_H
+#endif //JOHNSON_COREY_LAB5_BOARDSPA{}CE_H

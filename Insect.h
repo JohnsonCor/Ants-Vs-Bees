@@ -7,34 +7,33 @@
 
 #include <string>
 #include <vector>
-//#include "BoardSpace.h"
 
 class Insect {
 
 public:
-    //Insect(BoardSpace space, int armor);
+    explicit Insect(std::string name, int armor);
     Insect();
 
     Insect(const Insect &orig);
-    ~Insect();
+    virtual ~Insect();
     Insect &operator=(const Insect &orig);
 
-    //virtual BoardSpace getSpace();
-    virtual int getArmor();
+    virtual std::string getName() const ;
+    virtual int getArmor() const ;
 
-    //virtual void setSpace(BoardSpace space);
+    virtual void setName(std::string name);
     virtual void setArmor(int armorVal);
 
-    virtual void action() = 0;
-    virtual void takeDamage();
-    virtual bool isAnt() = 0;
-    virtual bool isBee() = 0;
-    virtual std::string toString() = 0;
+    virtual void action();
+    virtual void takeDamage(int amountDamage);
+    virtual bool isAnt();
+    virtual bool isBee();
+    //virtual std::string toString() = 0;
 
-private:
-    //BoardSpace space;
+protected:
+    std::string name;
     int armor;
 };
 
 
-#endif //JOHNSON_COREY_LAB5_INSECT_H
+#endif //JOHNSON_COREY_{}{}{}LAB5_INSECT_H

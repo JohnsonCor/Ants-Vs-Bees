@@ -12,11 +12,11 @@
 class Bee : public Insect {
 
 public:
-    //Bee(std::string name, BoardSpace space, int armor);
+    explicit Bee(std::string name, int armor);
     Bee();
 
     Bee(const Bee &orig);
-    ~Bee();
+    ~Bee() override;
     Bee &operator=(const Bee &orig);
 
     void action() override;
@@ -26,8 +26,8 @@ public:
     void moveLeft();
     std::string toString();
 
-private:
-    std::string name;
+//private:
+//    std::string name;
 };
 
 
