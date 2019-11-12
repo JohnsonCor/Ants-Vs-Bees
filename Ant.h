@@ -28,7 +28,7 @@ public:
     virtual void setDamage(int damage);
     virtual void setFoodCost(int foodCost);
 
-    virtual void action() = 0;
+    virtual void action();
     virtual bool isAnt();
 
 private:

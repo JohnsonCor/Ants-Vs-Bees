@@ -7,6 +7,8 @@
 Bee::Bee(std::string name, int armor) : Insect(name, armor){
     this->name = name;
     this->armor = armor;
+    this->ant = false;
+    this->bee = true;
 }
 
 Bee::Bee() = default;
@@ -31,9 +33,11 @@ void Bee::action() {
     Insect::action();
 }
 
+/*
 bool Bee::isBee() {
     return Insect::isBee();
 }
+*/
 
 void Bee::sting() {
 

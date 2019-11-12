@@ -92,6 +92,7 @@ bool BoardSpace::hasBee() {
  * @param insect An Insect object
  * @description Add an Insect to a BoardSpace
  */
+ /*
 void BoardSpace::addInsect(Insect insect) {
     if (insect.isAnt()) {
         insects.push_back(insect);
@@ -102,12 +103,14 @@ void BoardSpace::addInsect(Insect insect) {
         //bees.push_back(insect);
     }
 }
-
+*/
 /**
  *
  * @param insect An Insect object
  * @description Remove an Isect from a BoardSpace
  */
+ /*
 void BoardSpace::removeInsect(Insect insect) {
 
 }
+*/

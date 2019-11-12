@@ -24,7 +24,7 @@ public:
     virtual void setName(std::string name);
     virtual void setArmor(int armorVal);
 
-    virtual void action();
+    virtual void action()=0;
     virtual void takeDamage(int amountDamage);
     virtual bool isAnt();
     virtual bool isBee();
@@ -33,6 +33,8 @@ public:
 protected:
     std::string name;
     int armor;
+    bool ant;
+    bool bee;
 };
 
 

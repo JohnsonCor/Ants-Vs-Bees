@@ -20,14 +20,14 @@ public:
     Bee &operator=(const Bee &orig);
 
     void action() override;
-    bool isBee() override ;
+    //bool isBee();
     void sting();
     bool isBlocked();
     void moveLeft();
     std::string toString();
 
-//private:
-//    std::string name;
+protected:
+    std::string name;
 };
 
 

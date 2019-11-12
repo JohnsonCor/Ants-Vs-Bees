@@ -34,11 +34,11 @@ public:
 
     virtual bool hasAnt();
     virtual bool hasBee();
-    virtual void addInsect(Insect insect);
-    virtual void removeInsect(Insect insect);
+    //virtual void addInsect(Insect insect);
+    //virtual void removeInsect(Insect insect);
 
 private:
-    Insect insect;
+    //Insect insect;
     //Ant* a; If Ant is pure virtual you can have pointer but not object
     //FireAnt f;
     Bee b;
