@@ -17,25 +17,25 @@ public:
     Ant();
 
     Ant(const Ant &orig);
-    ~Ant();
+    ~Ant() override;
     Ant &operator=(const Ant &orig);
 
-    virtual std::string getName();
-    virtual int getDamage();
-    virtual int getFoodCost();
+    //virtual std::string getName();
+    //virtual int getDamage();
+    //virtual int getFoodCost();
 
-    virtual void setName(std::string name);
-    virtual void setDamage(int damage);
-    virtual void setFoodCost(int foodCost);
+    //virtual void setName(std::string name);
+    //virtual void setDamage(int damage);
+    //virtual void setFoodCost(int foodCost);
 
-    virtual void action();
-    virtual bool isAnt();
+    //virtual void action();
+    //virtual bool isAnt();
 
 private:
-    std::string name;
-    int damage;
-    int foodCost;
+    //std::string name;
+    //int damage;
+    //int foodCost;
 };
 
 
-#endif //JOHNSON_COREY_LAB5_ANT_H
+#endif //J{}OHNSON_COREY_LAB5_A{}NT_H

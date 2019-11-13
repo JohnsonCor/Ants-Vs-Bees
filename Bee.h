@@ -12,22 +12,23 @@
 class Bee : public Insect {
 
 public:
-    explicit Bee(std::string name, int armor);
+    //explicit Bee(int armor);
     Bee();
 
     Bee(const Bee &orig);
     ~Bee() override;
     Bee &operator=(const Bee &orig);
 
-    void action() override;
+    void action();
     //bool isBee();
-    void sting();
-    bool isBlocked();
+    void sting(Insect &ant);
+    void setBlocked(bool isBlocked);
+    bool getBlocked();
     void moveLeft();
     std::string toString();
 
 protected:
-    std::string name;
+    bool isBlocked;
 };
 
 

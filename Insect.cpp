@@ -11,7 +11,8 @@
  * @description Insect parameterized constructor
  */
 Insect::Insect(std::string name, int armor) {
-    this->setArmor(armor);
+    this->name = name;
+    this->armor = armor;
 }
 
 /**
@@ -26,7 +27,9 @@ Insect::Insect() {
  * @param orig Insect object to be copied
  */
 Insect::Insect(const Insect &orig) {
+    this->setName(orig.getName());
     this->setArmor(orig.getArmor());
+    this->damage = orig.getDamage();
 }
 
 /**
@@ -44,7 +47,9 @@ Insect &Insect::operator=(const Insect &orig) {
     if (&orig == this) {
         return (*this);
     }
+    this->setName(orig.getName());
     this->setArmor(orig.getArmor());
+    this->damage = orig.getDamage();
     return (*this);
 }
 
@@ -68,6 +73,22 @@ int Insect::getArmor() const {
 
 /**
  *
+ * @return
+ */
+int Insect::getDamage() const {
+    return this->damage;
+}
+
+/**
+ *
+ * @return
+ */
+int Insect::getFoodCost() const {
+    return this->foodCost;
+}
+
+/**
+ *
  * @param name Insect name
  * @description Insect name setter method
  */
@@ -82,6 +103,21 @@ void Insect::setName(std::string name) {
  */
 void Insect::setArmor(int armorVal) {
     this->armor = armorVal;
+}
+
+/**
+ *
+ */
+void Insect::setDamage(int damage) {
+    this->damage = damage;
+}
+
+/**
+ *
+ * @param damage
+ */
+void Insect::setFoodCost(int foodCost) {
+    this->damage = foodCost;
 }
 
 /**

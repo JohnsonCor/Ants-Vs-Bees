@@ -16,7 +16,7 @@ public:
     ShortThrowerAnt();
 
     ShortThrowerAnt(const ShortThrowerAnt &orig);
-    ~ShortThrowerAnt();
+    ~ShortThrowerAnt() override;
     ShortThrowerAnt &operator=(const ShortThrowerAnt &orig);
 
     void action() override;

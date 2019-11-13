@@ -16,7 +16,7 @@ public:
     ThrowerAnt();
 
     ThrowerAnt(const ThrowerAnt &orig);
-    ~ThrowerAnt();
+    ~ThrowerAnt() override;
     ThrowerAnt &operator=(const ThrowerAnt &orig);
 
     void action() override;

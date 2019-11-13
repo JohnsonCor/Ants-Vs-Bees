@@ -16,7 +16,7 @@ public:
     LongThrowerAnt();
 
     LongThrowerAnt(const LongThrowerAnt &orig);
-    ~LongThrowerAnt();
+    ~LongThrowerAnt() override;
     LongThrowerAnt &operator=(const LongThrowerAnt &orig);
 
     void action() override;

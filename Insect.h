@@ -20,9 +20,13 @@ public:
 
     virtual std::string getName() const ;
     virtual int getArmor() const ;
+    virtual int getDamage() const ;
+    virtual int getFoodCost() const ;
 
     virtual void setName(std::string name);
     virtual void setArmor(int armorVal);
+    virtual void setDamage(int damage);
+    virtual void setFoodCost(int foodCost);
 
     virtual void action()=0;
     virtual void takeDamage(int amountDamage);
@@ -33,6 +37,8 @@ public:
 protected:
     std::string name;
     int armor;
+    int damage;
+    int foodCost;
     bool ant;
     bool bee;
 };

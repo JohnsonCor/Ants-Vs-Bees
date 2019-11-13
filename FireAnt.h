@@ -16,7 +16,7 @@ public:
     FireAnt();
 
     FireAnt(const FireAnt &orig);
-    ~FireAnt();
+    ~FireAnt() override;
     FireAnt &operator=(const FireAnt &orig);
 
     void action() override;

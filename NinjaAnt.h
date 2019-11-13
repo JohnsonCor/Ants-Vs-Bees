@@ -16,7 +16,7 @@ public:
     NinjaAnt();
 
     NinjaAnt(const NinjaAnt &orig);
-    ~NinjaAnt();
+    ~NinjaAnt() override;
     NinjaAnt &operator=(const NinjaAnt &orig);
 
     void action() override;

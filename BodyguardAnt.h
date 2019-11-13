@@ -16,7 +16,7 @@ public:
     BodyguardAnt();
 
     BodyguardAnt(const BodyguardAnt &orig);
-    ~BodyguardAnt();
+    ~BodyguardAnt() override;
     BodyguardAnt &operator=(const BodyguardAnt &orig);
 
     void action() override;
