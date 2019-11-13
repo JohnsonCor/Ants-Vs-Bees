@@ -34,7 +34,7 @@ public:
 
     virtual bool hasAnt();
     virtual bool hasBee();
-    //virtual void addInsect(Insect insect);
+    //virtual void addInsect(Insect &insect);
     //virtual void removeInsect(Insect insect);
 
 private:

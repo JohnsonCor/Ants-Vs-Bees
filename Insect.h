@@ -32,7 +32,6 @@ public:
     virtual void takeDamage(int amountDamage);
     virtual bool isAnt();
     virtual bool isBee();
-    //virtual std::string toString() = 0;
 
 protected:
     std::string name;

@@ -16,7 +16,7 @@ public:
     WallAnt();
 
     WallAnt(const WallAnt &orig);
-    ~WallAnt();
+    ~WallAnt() override;
     WallAnt &operator=(const WallAnt &orig);
 
     void action() override;

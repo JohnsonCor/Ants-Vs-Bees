@@ -73,7 +73,8 @@ int Insect::getArmor() const {
 
 /**
  *
- * @return
+ * @return Damage
+ * @description Insect damage getter method
  */
 int Insect::getDamage() const {
     return this->damage;
@@ -81,7 +82,8 @@ int Insect::getDamage() const {
 
 /**
  *
- * @return
+ * @return foodCost
+ * @description Insect foodCost getter method
  */
 int Insect::getFoodCost() const {
     return this->foodCost;
@@ -106,7 +108,8 @@ void Insect::setArmor(int armorVal) {
 }
 
 /**
- *
+ * @param damage
+ * @description Insect damage setter method
  */
 void Insect::setDamage(int damage) {
     this->damage = damage;
@@ -115,13 +118,15 @@ void Insect::setDamage(int damage) {
 /**
  *
  * @param damage
+ * @description Insect foodCost setter method
  */
 void Insect::setFoodCost(int foodCost) {
     this->damage = foodCost;
 }
 
 /**
- * @description
+ * @description Pure virtual method, overridden in
+ * each child class
  */
 void Insect::action() {
 

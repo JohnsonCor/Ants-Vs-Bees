@@ -4,6 +4,9 @@
 
 #include "HarvesterAnt.h"
 
+/**
+ * @description Default constructor
+ */
 HarvesterAnt::HarvesterAnt() {
     this->name = "HarvesterAnt";
     this->armor = 1;
@@ -13,6 +16,11 @@ HarvesterAnt::HarvesterAnt() {
     this->damage = 0;
 }
 
+/**
+ *
+ * @param orig HarvesterAnt object to be copied
+ * @description Copy constructor
+ */
 HarvesterAnt::HarvesterAnt(const HarvesterAnt &orig) {
     this->setName(orig.getName());
     this->setArmor(orig.getArmor());
@@ -22,8 +30,17 @@ HarvesterAnt::HarvesterAnt(const HarvesterAnt &orig) {
     this->bee = false;
 }
 
+/**
+ * @description Destructor
+ */
 HarvesterAnt::~HarvesterAnt() = default;
 
+/**
+ *
+ * @param orig HarvesterAnt object to be copied
+ * @return HarvesterAnt copy
+ * @desription Overloaded copy constructor
+ */
 HarvesterAnt &HarvesterAnt::operator=(const HarvesterAnt &orig) {
     if (&orig == this) {
         return (*this);
@@ -37,6 +54,10 @@ HarvesterAnt &HarvesterAnt::operator=(const HarvesterAnt &orig) {
     return (*this);
 }
 
+/**
+ * @description Adds 1 food to the colony for each
+ * turn that it lives
+ */
 void HarvesterAnt::action() {
 
 }

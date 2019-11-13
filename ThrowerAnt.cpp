@@ -4,6 +4,9 @@
 
 #include "ThrowerAnt.h"
 
+/**
+ * @description Default constructor
+ */
 ThrowerAnt::ThrowerAnt() {
     this->name = "ThrowerAnt";
     this->armor = 1;
@@ -13,6 +16,11 @@ ThrowerAnt::ThrowerAnt() {
     this->damage = 1;
 }
 
+/**
+ *
+ * @param orig ThrowerAnt object to be copied
+ * @description Copy constructor
+ */
 ThrowerAnt::ThrowerAnt(const ThrowerAnt &orig) {
     this->setName(orig.getName());
     this->setArmor(orig.getArmor());
@@ -22,6 +30,9 @@ ThrowerAnt::ThrowerAnt(const ThrowerAnt &orig) {
     this->bee = false;
 }
 
+/**
+ * @description Destructor
+ */
 ThrowerAnt::~ThrowerAnt() = default;
 
 ThrowerAnt &ThrowerAnt::operator=(const ThrowerAnt &orig) {
@@ -37,6 +48,10 @@ ThrowerAnt &ThrowerAnt::operator=(const ThrowerAnt &orig) {
     return (*this);
 }
 
+/**
+ * @description Throws a leaf at one Bee sharing its space
+ * dealing 1 damage to it
+ */
 void ThrowerAnt::action() {
 
 }

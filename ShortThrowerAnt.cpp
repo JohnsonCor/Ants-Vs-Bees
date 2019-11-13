@@ -4,6 +4,9 @@
 
 #include "ShortThrowerAnt.h"
 
+/**
+ * @description Default constructor
+ */
 ShortThrowerAnt::ShortThrowerAnt() {
     this->name = "ShortThrowerAnt";
     this->armor = 1;
@@ -13,6 +16,11 @@ ShortThrowerAnt::ShortThrowerAnt() {
     this->damage = 1;
 }
 
+/**
+ *
+ * @param orig ShortThrowerAnt object to be copied
+ * @description Copy constructor
+ */
 ShortThrowerAnt::ShortThrowerAnt(const ShortThrowerAnt &orig) {
     this->setName(orig.getName());
     this->setArmor(orig.getArmor());
@@ -22,8 +30,17 @@ ShortThrowerAnt::ShortThrowerAnt(const ShortThrowerAnt &orig) {
     this->bee = false;
 }
 
+/**
+ * @description Destructor
+ */
 ShortThrowerAnt::~ShortThrowerAnt() = default;
 
+/**
+ *
+ * @param orig ShortThrowerAnt object to be copied
+ * @return ShortThrowerAnt copy
+ * @description Overloaded copy constructor
+ */
 ShortThrowerAnt &ShortThrowerAnt::operator=(const ShortThrowerAnt &orig) {
     if (&orig == this) {
         return (*this);
@@ -37,6 +54,10 @@ ShortThrowerAnt &ShortThrowerAnt::operator=(const ShortThrowerAnt &orig) {
     return (*this);
 }
 
+/**
+ * @description Inflicts 1 damage on each Bee that
+ * is no more that 2 spaces away
+ */
 void ShortThrowerAnt::action() {
 
 }

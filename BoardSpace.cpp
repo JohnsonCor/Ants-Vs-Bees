@@ -30,9 +30,7 @@ BoardSpace::BoardSpace(const BoardSpace &orig) {
 /**
  * @description BoardSpace destructor
  */
-BoardSpace::~BoardSpace() {
-
-}
+BoardSpace::~BoardSpace() = default;
 
 /**
  *
@@ -92,8 +90,8 @@ bool BoardSpace::hasBee() {
  * @param insect An Insect object
  * @description Add an Insect to a BoardSpace
  */
- /*
-void BoardSpace::addInsect(Insect insect) {
+/*
+void BoardSpace::addInsect(Insect &insect) {
     if (insect.isAnt()) {
         insects.push_back(insect);
         //ants.push_back(insect);

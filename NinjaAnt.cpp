@@ -4,6 +4,9 @@
 
 #include "NinjaAnt.h"
 
+/**
+ * @description Default constructor
+ */
 NinjaAnt::NinjaAnt() {
     this->name = "NinjaAnt";
     this->armor = 1;
@@ -13,6 +16,11 @@ NinjaAnt::NinjaAnt() {
     this->damage = 1;
 }
 
+/**
+ *
+ * @param orig NinjaAnt object to be copied
+ * @description Copy constructor
+ */
 NinjaAnt::NinjaAnt(const NinjaAnt &orig) {
     this->setName(orig.getName());
     this->setArmor(orig.getArmor());
@@ -22,8 +30,17 @@ NinjaAnt::NinjaAnt(const NinjaAnt &orig) {
     this->bee = false;
 }
 
+/**
+ * @description Destructor
+ */
 NinjaAnt::~NinjaAnt() = default;
 
+/**
+ *
+ * @param orig NinjaAnt object to be copied
+ * @return NinjaAnt copy
+ * @description Overloaded copy constructor
+ */
 NinjaAnt &NinjaAnt::operator=(const NinjaAnt &orig) {
     if (&orig == this) {
         return (*this);
@@ -37,6 +54,10 @@ NinjaAnt &NinjaAnt::operator=(const NinjaAnt &orig) {
     return (*this);
 }
 
+/**
+ * @description Cannot block Bees, and Bees cannot attack it.
+ * Bees pass by the ninja and take 1 damage.
+ */
 void NinjaAnt::action() {
 
 }

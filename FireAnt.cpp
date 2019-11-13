@@ -4,6 +4,9 @@
 
 #include "FireAnt.h"
 
+/**
+ * @description Default constructor
+ */
 FireAnt::FireAnt(): Ant(name, armor) {
     this->name = "FireAnt";
     this->armor = 1;
@@ -13,6 +16,11 @@ FireAnt::FireAnt(): Ant(name, armor) {
     this->damage = 3;
 }
 
+/**
+ *
+ * @param orig FireAnt to be copied
+ * @description Copy constructor
+ */
 FireAnt::FireAnt(const FireAnt &orig) {
     this->setName(orig.getName());
     this->setArmor(orig.getArmor());
@@ -22,8 +30,17 @@ FireAnt::FireAnt(const FireAnt &orig) {
     this->bee = false;
 }
 
+/**
+ * @description Destructor
+ */
 FireAnt::~FireAnt() = default;
 
+/**
+ *
+ * @param orig FireAnt object to be copied
+ * @return FireAnt copy
+ * @description Overloaded copy constructor
+ */
 FireAnt &FireAnt::operator=(const FireAnt &orig) {
     if (&orig == this) {
         return (*this);
@@ -37,6 +54,11 @@ FireAnt &FireAnt::operator=(const FireAnt &orig) {
     return (*this);
 }
 
+/**
+ * @description Upon death of this Ant, it reduces
+ * the armor value of all Bees that share its space
+ * to 0
+ */
 void FireAnt::action() {
 
 }
