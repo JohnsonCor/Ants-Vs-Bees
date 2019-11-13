@@ -28,21 +28,20 @@ public:
     ~BoardSpace();
     BoardSpace &operator=(const BoardSpace &orig);
 
-    virtual int getSpaceNum() const ;
+    int getSpaceNum() const ;
 
-    virtual void setSpaceNum(int spaceNum);
+    void setSpaceNum(int spaceNum);
 
-    virtual bool hasAnt();
-    virtual bool hasBee();
-    //virtual void addInsect(Insect &insect);
-    //virtual void removeInsect(Insect insect);
+    bool hasAnt();
+    bool hasBee();
+    //void addAnt(Ant* ant);
+    void addInsect(Insect* insect);
+    //void removeInsect(Insect insect);
 
-private:
-    //Insect insect;
-    //Ant* a; If Ant is pure virtual you can have pointer but not object
-    //FireAnt f;
+protected:
+    Insect* insectPtr;
     Bee b;
-    std::vector<Insect> insects;
+    std::vector<Insect*> insects;
     std::vector<Ant> ants;
     std::vector<Bee> bees;
     int spaceNum;

@@ -84,24 +84,36 @@ bool BoardSpace::hasAnt() {
 bool BoardSpace::hasBee() {
     return false;
 }
+/*
+void BoardSpace::addAnt(Ant* ant) {
+    insects.push_back(*ant);
+}
+*/
 
 /**
  *
  * @param insect An Insect object
  * @description Add an Insect to a BoardSpace
  */
-/*
-void BoardSpace::addInsect(Insect &insect) {
-    if (insect.isAnt()) {
+
+void BoardSpace::addInsect(Insect* insect) {
+    if (insect->isAnt()) {
         insects.push_back(insect);
-        //ants.push_back(insect);
     }
-    if (insect.isBee()) {
+    if (insect->isBee()) {
         insects.push_back(insect);
-        //bees.push_back(insect);
     }
+    /*
+    this->insectPtr = insect;
+    if (insectPtr->isAnt()) {
+        insects.push_back(insectPtr);
+    }
+    if (insectPtr->isBee()) {
+        //insects.push_back(insect);
+    }
+     */
 }
-*/
+
 /**
  *
  * @param insect An Insect object
