@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include "Insect.h"
+//#include "Insect.h"
 #include "Bee.h"
 #include "HarvesterAnt.h"
 #include "ThrowerAnt.h"
@@ -22,6 +22,15 @@
 class Game {
 
 public:
+    Game();
+
+    Game(const Game &orig);
+    ~Game();
+    Game &operator=(const Game &orig);
+
+    int getColonyFood();
+
+    void setColonyFood(int ColonyFood);
 
 protected:
     int colonyFood;
